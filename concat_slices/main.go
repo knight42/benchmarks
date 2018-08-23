@@ -1,5 +1,7 @@
 package concat_slices
 
+import "bytes"
+
 func concatCopyPreAllocate(slices [][]byte) []byte {
 	var totalLen int
 	for _, s := range slices {
@@ -11,6 +13,14 @@ func concatCopyPreAllocate(slices [][]byte) []byte {
 		i += copy(tmp[i:], s)
 	}
 	return tmp
+}
+
+func concatWriteBuffer(slices [][]byte) []byte {
+	var buf bytes.Buffer
+	for _, s := range slices {
+		buf.Write(s)
+	}
+	return buf.Bytes()
 }
 
 func concatAppend(slices [][]byte) []byte {
