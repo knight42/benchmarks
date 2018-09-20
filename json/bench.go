@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"os"
 	"time"
 )
 
 func main() {
-	content, _ := ioutil.ReadFile("./data.json")
+	content, _ := ioutil.ReadFile(os.Args[1])
 	N := int(1e5)
 	beg := time.Now()
 	for i := 0; i < N; i++ {

@@ -26,7 +26,7 @@ $(node ./bench.js ./data.json)
 
 # Go
 \`\`\`
-$(go run ./bench.go)
+$(go run ./bench.go ./data.json)
 \`\`\`
 
 # Rust ($rustc_version)

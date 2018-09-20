@@ -4,21 +4,21 @@
 
 # Python
 ```
-json.loads: 10.678575798s
-simplejson.loads: 9.715182723000002s
+json.loads: 10.567198162999999s
+simplejson.loads: 9.670800240000002s
 ```
 
 # Node.js
 ```
-JSON.parse: 6598.825ms
+JSON.parse: 6567.516ms
 ```
 
 # Go
 ```
-json.Unmarshal: 19.943298365s
+json.Unmarshal: 19.915454795s
 ```
 
 # Rust (rustc 1.29.0 (aa3ca1994 2018-09-11))
 ```
-serde_json::from_str: 6.893s
+serde_json::from_str: 6.900s
 ```
