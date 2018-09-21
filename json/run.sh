@@ -15,22 +15,46 @@ cat > './README.md' <<EOF
 * Memory: 16 GB 2133 MHz LPDDR3
 
 # Python
+10K:
 \`\`\`
 $(python ./bench.py ./data.json)
 \`\`\`
 
+130K:
+\`\`\`
+$(python ./bench.py ./large-data.json)
+\`\`\`
+
 # Node.js
+10K:
 \`\`\`
 $(node ./bench.js ./data.json)
 \`\`\`
 
+130K:
+\`\`\`
+$(node ./bench.js ./large-data.json)
+\`\`\`
+
 # Go
+10K:
 \`\`\`
 $(go run ./bench.go ./data.json)
 \`\`\`
 
+130K:
+\`\`\`
+$(go run ./bench.go ./large-data.json)
+\`\`\`
+
 # Rust ($rustc_version)
+10K:
 \`\`\`
 $(./bench.rs ./data.json)
+\`\`\`
+
+130K:
+\`\`\`
+$(./bench.rs ./large-data.json)
 \`\`\`
 EOF
